@@ -7,22 +7,63 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    
+    <!-- <script type="text/javascript" src="script.js"></script> -->
     <title>Jquery  Pill</title>
 </head>
 
 <body>
-
+    
 <!-- BOX 1 -->
+<header>
 <div class="container-fluid">
-    <div class="row box">
-        <div class="col-6 offset-3">
-            <h1>Hello</h1>
-            <p>Hello</p>
+    <div class="row">
+        <div class="col-3">
+            <p>Jquery</p>
+        </div>
+        <div class="col-3">
+            <p>JavaScript</p>
+        </div>
+        <div class="col-3">
+            <p>Project Catalogue</p>
+        </div>
+        <div class="col-3">
+            <p>Jquery plugin</p>
         </div>
     </div>
 </div>
+</header>
+
+<main>
+    <div class="container-fluid">
+        <div class="row box">
+            <div class="col-3">
+                    <p onclick="alert('Click event triggered with Jquery')">Click here to experience how an item is clicked with Jquery</p>
+                    <p id="paragraph" onclick="alert('Click event triggered with JavaScript')">Click here to experience how an item is clicked with JavaScript.</p>
+            </div>
+            <div class="col-3">
+                <span>Hover the mouse pointer over this paragraph to experience the Jquery hover method</span>
+            </div>
+            <div class="col-3">
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)"  src="assets/jquerysmalllogo.gif" alt="Smiley" width="32" height="32">
+                <p>The function bigImg() is triggered when the user moves the mouse pointer over the image.</p>
+                <p>The function normalImg() is triggered when the mouse pointer is moved out of the image.</p>
+            </div>
+            <div class="col-3">
+                Enter your name: <input type="text" id="input-field">
+                <p>Enter your name in the input field above. It will change background color on keydown and keyup.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer>
+    <div class="col-3 offset-9">
+    <p>Jquery Basics Pill</p>
+    </div>
+</footer>
+<script type="text/javascript" src="jquery.js"></script>
 </body>
 
 </html>
