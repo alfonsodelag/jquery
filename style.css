@@ -1,0 +1,14 @@
+* {
+    text-align: center;
+    margin: 1px solid black;
+}
+
+
+.box {
+    margin: 1px solid black;
+    height: 700px;
+    width: auto;
+    background-image: url("assets/jquerylogo.png");
+}
+
+
