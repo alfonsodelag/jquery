@@ -7,8 +7,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <!-- <script type="text/javascript" src="script.js"></script> -->
     <title>Jquery  Pill</title>
 </head>
 
@@ -38,7 +36,7 @@
     <div class="container-fluid">
         <div class="row box">
             <div class="col-3">
-                    <p onclick="alert('Click event triggered with Jquery')">Click here to experience how an item is clicked with Jquery</p>
+                    <p id="click-event" onclick="alert('Click event triggered with Jquery')">Click here to experience how an item is clicked with Jquery</p>
                     <p id="paragraph" onclick="alert('Click event triggered with JavaScript')">Click here to experience how an item is clicked with JavaScript.</p>
             </div>
             <div class="col-3">
@@ -54,9 +52,77 @@
                 <p>Enter your name in the input field above. It will change background color on keydown and keyup.</p>
             </div>
         </div>
+        <div class="row">
+                <div class="col-3">
+                    <p>Mouse is at coordinates: <span></span>.</p>
+                </div>
+                <div class="col-3" onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+                    <p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>
+                    <p>When the mouse is moved over the div, the p element will display the horizontal and vertical coordinates of your mouse pointer, whose values are returned from the clientX and clientY properties on the 
+                    MouseEvent object.</p>
+                    <p id="demo"></p>
+                <div class="col-3">
+                    <p>Click this paragraph.</p>
+                </div>
+                <div class="col-3">
+                    <p id="hideShow">If you click on the "Hide" button, I will disappear.</p>
+                    <button id="hide">Hide</button>
+                    <button id="show">Show</button>
+                </div>
+                <div class="row">
+                <div class="col-3">
+                    <button>Alert the value of each list item</button>
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Milk</li>
+                        <li>Soda</li>
+                    </ul>
+                <div class="col-3 ancestors">
+                    <div style="width:500px;">div (great-grandparent)
+                        <ul>ul (grandparent)  
+                            <li>li (direct parent)
+                            <span>span</span>
+                            </li>
+                        </ul>   
+                    </div>
+                </div>
+                    <div class="col-3">
+                        <p>Click the button to get the node name of the parent element of the li element in the list.</p>
+                        <button onclick="getParent()">Try it</button>
+                    </div>
+                    <div class="col-3">
+                        <div class="descendants">(great-grandparent)
+                            <div style="width:500px;">div (grandparent)
+                                <ul>ul (direct parent)  
+                                <li>li (child)
+                                    <span>span (grandchild)</span>
+                                </li>
+                                </ul>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-3">
+                <h1>This is a heading</h1>
+                <p class="intro">This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+                <button>Does any p element have an "intro" class?</button>
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+        </div>    
+        </div>
     </div>
 </main>
-
 
 <footer>
     <div class="col-3 offset-9">
@@ -64,6 +130,7 @@
     </div>
 </footer>
 <script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
