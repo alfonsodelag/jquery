@@ -68,3 +68,51 @@ $(document).ready(function(){
       alert($("p").hasClass("intro"));
     });
   });
+
+  $(document).ready(function(){
+    $("button").click(function(){
+      $(".test").hide();
+    });
+  });
+
+
+  $(document).ready(function(){
+    $("#intro").css("background-color", "yellow");
+  });
+
+  $(document).ready(function(){
+    $("p:hidden").show(3500);
+  });
+
+  
+$(document).ready(function(){
+  $(":selected").css("background-color", "red");
+});
+
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#w3s").attr("href", "https://www.w3schools.com/jquery/");
+  });
+});
+
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("p").append(" <b>This text was appended using Jquery</b>.");
+  });
+  $("#btn2").click(function(){
+    $("ol").append("<li>This item was appended using Jquery</li>");
+  });
+});
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").remove();
+  });
+});
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({left: '250px'});
+  });
+});

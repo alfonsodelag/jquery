@@ -38,3 +38,9 @@ function getParent() {
     var x = document.getElementById("myLI").parentElement.nodeName;
     document.getElementById("demo").innerHTML = x;
 }
+
+
+function myFunction() {
+    var x = document.getElementsByClassName("example");
+    x[0].innerHTML = "Hello World!";
+}
