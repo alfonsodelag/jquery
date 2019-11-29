@@ -34,114 +34,141 @@
 
 <main>
 <div class="container-fluid">
+
         <div class="row box">
+
             <div class="col-3">
-                    <p id="click-event" onclick="alert('Click event triggered with Jquery')">Click here to experience how an item is clicked with Jquery</p>
-                    <p id="paragraph" onclick="alert('Click event triggered with JavaScript')">Click here to experience how an item is clicked with JavaScript.</p>
+                <p id="click-event" onclick="alert('Click event triggered with Jquery')">Click here to experience how an item is clicked with Jquery</p>
+                <p id="paragraph" onclick="alert('Click event triggered with JavaScript')">Click here to experience how an item is clicked with JavaScript.</p>
             </div>
+
             <div class="col-3">
                 <span>Hover the mouse pointer over this paragraph to experience the Jquery hover method</span>
             </div>
+
             <div class="col-3">
                 <img onmouseover="bigImg(this)" onmouseout="normalImg(this)"  src="assets/jquerysmalllogo.gif" alt="Smiley" width="32" height="32">
                 <p>The function bigImg() is triggered when the user moves the mouse pointer over the image.</p>
                 <p>The function normalImg() is triggered when the mouse pointer is moved out of the image.</p>
             </div>
+
             <div class="col-3">
                 Enter your name: <input type="text" id="input-field">
                 <p>Enter your name in the input field above. It will change background color on keydown and keyup.</p>
             </div>
+
         </div>
+
         <div class="row">
-                <div class="col-3">
-                    <p>Mouse is at coordinates: <span></span>.</p>
+
+            <div class="col-3">
+                <p>Mouse is at coordinates: <span></span>.</p>
+            </div>
+
+            <div class="col-3" onmousemove="myFunction(event)" onmouseout="clearCoor()">
+                <p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>
+                <p>When the mouse is moved over the div, the p element will display the horizontal and vertical coordinates of your mouse pointer, whose values are returned from the clientX and clientY properties on the 
+                MouseEvent object.</p>
+                <p id="demo"></p>
+            </div>
+
+
+            <div class="col-3">
+                <p>Click this paragraph.</p>
+            </div>
+
+            <div class="col-3">
+                <p id="hideShow">If you click on the "Hide" button, I will disappear.</p>
+                <button id="hide">Hide</button>
+                <button id="show">Show</button>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-3">
+                <button>Alert the value of each list item</button>
+                <ul>
+                    <li>Coffee</li>
+                    <li>Milk</li>
+                    <li>Soda</li>
+                </ul>
+            </div>
+                
+            <div class="col-3 ancestors">
+                <div style="width:500px;">div (great-grandparent)
+                    <ul>ul (grandparent)  
+                        <li>li (direct parent)
+                        <span>span</span>
+                        </li>
+                    </ul>   
                 </div>
-                <div class="col-3" onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
-                    <p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>
-                    <p>When the mouse is moved over the div, the p element will display the horizontal and vertical coordinates of your mouse pointer, whose values are returned from the clientX and clientY properties on the 
-                    MouseEvent object.</p>
-                    <p id="demo"></p>
-                <div class="col-3">
-                    <p>Click this paragraph.</p>
-                </div>
-                <div class="col-3">
-                    <p id="hideShow">If you click on the "Hide" button, I will disappear.</p>
-                    <button id="hide">Hide</button>
-                    <button id="show">Show</button>
-                </div>
-                <div class="row">
-                <div class="col-3">
-                    <button>Alert the value of each list item</button>
-                    <ul>
-                        <li>Coffee</li>
-                        <li>Milk</li>
-                        <li>Soda</li>
-                    </ul>
-                <div class="col-3 ancestors">
-                    <div style="width:500px;">div (great-grandparent)
-                        <ul>ul (grandparent)  
-                            <li>li (direct parent)
-                            <span>span</span>
-                            </li>
+            </div>
+
+            <div class="col-3">
+                <p>Click the button to get the node name of the parent element of the li element in the list.</p>
+                <button onclick="getParent()">Try it</button>
+            </div>
+
+            <div class="col-3">
+                <div class="descendants">(great-grandparent)
+                    <div style="width:500px;">div (grandparent)
+                        <ul>ul (direct parent)  
+                        <li>li (child)
+                            <span>span (grandchild)</span>
+                        </li>
                         </ul>   
                     </div>
                 </div>
-                    <div class="col-3">
-                        <p>Click the button to get the node name of the parent element of the li element in the list.</p>
-                        <button onclick="getParent()">Try it</button>
-                    </div>
-                    <div class="col-3">
-                        <div class="descendants">(great-grandparent)
-                            <div style="width:500px;">div (grandparent)
-                                <ul>ul (direct parent)  
-                                <li>li (child)
-                                    <span>span (grandchild)</span>
-                                </li>
-                                </ul>   
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>    
+        </div>
+                
         <div class="row">
+
             <div class="col-3">
                 <h1>This is a heading</h1>
                 <p class="intro">This is a paragraph.</p>
                 <p>This is another paragraph.</p>
                 <button>Does any p element have an "intro" class?</button>
             </div>
+
             <div class="col-3">
                 <h2 class="test">This is a heading with a class</h2>
                 <p class="test">This is a paragraph with a class.</p>
                 <p>This is another paragraph. It has no class.</p>
                 <button>If you click here, all elements with classes will hide</button>
             </div>
+
             <div class="col-3">
-                <div class="example">First div element with class="example".</div>
+                <div class="example">First div element with class="example".
                     <div class="example">Second div element with class="example".</div>
                     <p>Click the button to change the text of the first div element with class="example" (index 0).</p>
                     <button onclick="myFunction()">Try it</button>
                     <p><strong>Note:</strong> The getElementsByClassName() method is not supported in Internet Explorer 8 and earlier versions.</p>
+                </div>    
             </div>
             <div class="col-3">
-                    <p id="intro">Ive been highlited yellow by Jquery because I have an ID.</p>
-                    <p>I don't have any ID.</p>
+                <p id="intro">Ive been highlited yellow by Jquery because I have an ID.</p>
+                <p>I don't have any ID.</p>
             </div>
         </div>
+        
         <div class="row">
+
             <div class=col-3>
                 <p>This is another paragraph.</p>
                 <p style="display:none;">This is a hidden paragraph that is slowly shown with :hidden in Jquery</p>
-            </div>
+        </div>
+
             <div class="col-3">
                 <form action="">
-                        <select>
-                            <option>Volvo</option>
-                            <option selected="selected">Option tag selected by Jquery b/c of "selected" attribute</option>
-                            <option>Mercedes</option>
-                            <option>Audi</option>
-                        </select>
+                    <select>
+                        <option>Volvo</option>
+                        <option selected="selected">Option tag selected by Jquery b/c of "selected" attribute</option>
+                        <option>Mercedes</option>
+                        <option>Audi</option>
+                    </select>
                 </form>
             </div>
             <div class="col-3">
