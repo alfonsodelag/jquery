@@ -34,7 +34,7 @@
 <main>
 <div class="container-fluid">
 
-        <div class="row box">
+        <div class="row">
 
             <div class="col-3">
                 <h1>The onclick Event</h1>
@@ -113,18 +113,10 @@
                 </div>
             </div>
                 
-            <div class="col-3">
-                <form>
-                    Select a fruit:
-                    <br>
-                    <select id="mySelect" size="4">
-                        <option class="option">Apple</option>
-                        <option class="option">Pear</option>
-                        <option class="option">Banana</option>
-                        <option class="option">Orange</option>
-                    </select>
-                    </form>
-                    <br>
+            <div id="changeStyle" class="col-3">
+                <p class="changeStyle">Item 1</p>
+                <p class="changeStyle">Item 2</p>
+                <p class="changeStyle">Item 3</p>
             </div>
 
             <div class="col-3">
@@ -136,7 +128,7 @@
             </div>
 
             <div class="col-3">
-                <a id="myAnchor">www.google.com</a>
+                <a id="myAnchor" href="www.google.com">www.google.com</a>
                 <p>Click the button to set the href attribute with a value of "www.w3schools.com" of the a element above.</p>
                 <button onclick="changeHrefAttribute()">Try it</button>
             </div>
@@ -145,7 +137,10 @@
         <div class="row">
 
             <div class="col-3">
-
+               <p class="addtext">We all have the same class!</p> 
+               <p class="addtext">We all have the same class!</p> 
+               <p class="addtext">We all have the same class!</p> 
+               <button onclick="addTextToP()">Click here to get all elements of a certain class</button>
             </div>
 
             <div class="col-3">

@@ -1,14 +1,16 @@
 
 //Capture that the document is available and that JavaScript has started successfully
-// window.onload = function() {
+window.onload = function() {
    
-//     window.alert("The document is available and JS native has started succesfully")
-// };
+    window.alert("The document is available and JS native has started succesfully")
+//     clicked.onclick() = alert("Click event triggered with JavaScript")
+  document.getElementById("changeStyle").addEventListener("click", changeStyle, true);
+}
 
 //Capture that an item has been clicked
 function captureItemOnClick() {
     document.getElementById("captureonclick").innerHTML = "Hello World";
-  }
+}
 
 //Capture that “hover” has been made on an item
 function bigImg(x) {
@@ -47,29 +49,50 @@ function hideAndShow() {
 }
 
 //PENDING: Get all the elements of a certain class (we refer to css class)
+function addTextToP(){
+  var addtextelements = document.getElementsByClassName("addtext");
+  for (let i = 0; i < addtextelements.length; i++) {
+    addtextelements[i].innerHTML = "We were all selected for having the same class";
+  }
+}
 
 //PENDING: Show an element animatedly with a molten effect
 
 //PENDING: Hide an element in an animated way with a molten effect
 
 //PENDING: Iterate a collection of elements and apply a change of style on them
+function changeStyle(){
+  var array = document.getElementsByClassName("changeStyle");
+  for (let i = 0; i < array.length; i++) {
+    var a = Math.floor(Math.random() *3 + 1)
+  if(a == 1){
+    array[i].style = "background-color:red";
+  }
+  if(a == 2){
+    array[i].style = "background-color:yellow";
+  }
+  if(a == 3){
+    array[i].style = "background-color:purple";
+  }
+};
+}
 
 //Obtain the parent element of a certain element
 function obtainParent() {
-    var x = document.getElementById("myLI").parentElement.nodeName;
-    document.getElementById("parentNode").innerHTML = x;
+  var x = document.getElementById("myLI").parentElement.nodeName;
+  document.getElementById("parentNode").innerHTML = x;
 }
 
 
 //Obtain the collection of children of a certain element (if that element has children)
 function getChildNodes() {
-    var list = document.getElementById("myList").hasChildNodes();
-    document.getElementById("haschildnodes").innerHTML = list;
+  var list = document.getElementById("myList").hasChildNodes();
+  document.getElementById("haschildnodes").innerHTML = list;
 }
 
 //Get an item by its ID
 function changeText() {
-    document.getElementById("changetext").innerHTML = "Hello World";
+  document.getElementById("changetext").innerHTML = "Hello World";
 }
 
 //PENDING: Obtain all the elements of a certain class that are also hidden (the fact that they are hidden will not be obtained through a css class)
@@ -82,11 +105,12 @@ function changeHrefAttribute() {
 
 
 //Create a new <p> element with text inside the dom of your page
-var para = document.createElement("p");
-var node = document.createTextNode("This is new paragraph created with the createTextNode Method.");
-para.appendChild(node);
-var element = document.getElementById("div1");
-element.appendChild(para);
+
+  var para = document.createElement("p");
+  var node = document.createTextNode("This is new paragraph created with the createTextNode Method.");
+  para.appendChild(node);
+  var element = document.getElementById("div1");
+  element.appendChild(para);
 
 
 //PENDING: Show an alert with the value of the first <input> of the page (Create an <input> element to test this case)
@@ -106,22 +130,6 @@ element.appendChild(para);
 // Given a name, surname, create a clear and organized HTML element.
 // This plugin must be configurable and allow two types of design with image on the left or image on the right.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function myFunction() {
-//    var clicked = document.getElementById("paragraph").click();
-//     clicked.onclick() = alert("Click event triggered with JavaScript")
 // }
 
 
