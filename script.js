@@ -32,7 +32,7 @@ function showCoords(event) {
     var y = event.clientY;
     var coords = "X coords: " + x + ", Y coords: " + y;
     document.getElementById("demo").innerHTML = coords;
-  }
+}
 
 //PENDING: Capture when an event has been carried out on several elements without the need to associate the event to each element separately.
 
@@ -44,7 +44,7 @@ function hideAndShow() {
     } else {
       x.style.display = "none";
     }
-  }
+}
 
 //PENDING: Get all the elements of a certain class (we refer to css class)
 
@@ -76,6 +76,9 @@ function changeText() {
 
 
 //PENDING: Change the href attribute of the first <a> element (Create an <a> element to test this case)
+function changeHrefAttribute() {
+    document.getElementById("myAnchor").setAttribute("href", "https://www.w3schools.com"); 
+  }
 
 
 //Create a new <p> element with text inside the dom of your page
@@ -89,7 +92,11 @@ element.appendChild(para);
 //PENDING: Show an alert with the value of the first <input> of the page (Create an <input> element to test this case)
 
 
-//PENDING Remove all elements of a specific selector
+// //PENDING Remove all elements of a specific selector
+// function removeElements() {
+//     var list = document.getElementsByClassName("element");
+//     list.removeChild(list.childNodes[]);
+//   }
 
 
 //PENDING Animate an item after 2 seconds from the initial page load

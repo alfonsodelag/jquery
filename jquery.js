@@ -3,43 +3,46 @@ $(document).ready(function(){
     // window.alert("The document is available and Jquery has started succesfully");
 
     //Capture that an item has been clicked
-    $("button").click(function(){
-      $('#click-event').click();
+    $("#click-event").click(function(){
+      alert('Click event triggered with Jquery')
     });
 
     //Capture that “hover” has been made on an item
-    $("span").hover(function(){
+    $("span:eq(0)").hover(function(){
       $(this).css("background-color", "yellow");
     }, function(){
       $(this).css("background-color", "pink");
-      
     });
 
     $("#input-field").keyup(function(){
-      alert("you pressed the key " + event.which);
-
-    $(document).mousemove(function(event){
-      $("span").text(event.pageX + ", " + event.pageY);
-    });
+      alert("you pressed the key " + String.fromCharCode(event.which) +  " the unicode is: " + event.which);
     });
 
+    $(".coordinates:eq(1)").mousemove(function(event){
+      $(".coordinates:eq(0)").text(event.pageX + ", " + event.pageY);
+    });
+    
     $("#hide").click(function(){
       $("#hideShow").hide();
     });
+
     $("#show").click(function(){
-      $("p").show();
+      $("#hideShow").show();
     });
 
-
-  $("button").click(function(){
-    $("li").each(function(){
-      alert($(this).text())
-    });
+//Iterate a collection of elements and apply a change of style on them
+  $(".changeStyle").click(function(){
+    $(".changeStyle").each(function(){
+      $(this).css("background-color", "yellow");
+      if($(this).text() == "Item 2") {
+        $(this).css("background-color", "blue");
+      }   
+    })
   });
 
-  $("span").parent().css({"color": "red", "border": "2px solid red"});
+  // $("span").parent().css({"color": "red", "border": "2px solid red"});
 
-  $("ul").children().css({"color": "red", "border": "2px solid red"});
+  // $("ul").children().css({"color": "red", "border": "2px solid red"});
 
   $("button").click(function(){
     alert($("p").hasClass("intro"));
@@ -75,8 +78,13 @@ $(document).ready(function(){
   $("div").animate({left: '250px'});
   });
 
+  $("#element-events").bind("select keydown click", function(e){
+  $(this).children().first().text("JQ, the event type is: " + e.type)
+  });
+
 });
 
+  
 
 
 // //Capture when the user has pressed a key and obtain the code associated with that key

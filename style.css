@@ -36,3 +36,10 @@ header, footer {
     margin: 15px;
 }
 
+.divcoordinates {
+    height: 100px;
+    width: 150px;
+    background-color: black;
+    color: burlywood;
+    display: inline-block;
+}

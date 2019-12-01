@@ -35,51 +35,60 @@
 <main>
 <div class="container-fluid">
 
-        <div class="row box">
+        <div class="row">
 
-            <div class="col-3">
-                <p id="click-event" onclick="alert('Click event triggered with Jquery')">Click here to experience how an item is clicked with Jquery</p>
+            <div class="col-4">
+                <p id="click-event">Click here to experience how an item is clicked with Jquery</p>
             </div>
 
-            <div class="col-3">
+            <div class="col-4">
                 <span>Hover the mouse pointer over this paragraph to experience the Jquery hover method</span>
             </div>
 
-            <div class="col-3">
-                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)"  src="assets/jquerysmalllogo.gif" alt="Smiley" width="32" height="32">
-                <p>The function bigImg() is triggered when the user moves the mouse pointer over the image.</p>
-                <p>The function normalImg() is triggered when the mouse pointer is moved out of the image.</p>
-            </div>
-
-            <div class="col-3">
-                Enter your name: <input type="text" id="input-field">
-                <p>Enter your name in the input field above. It will change background color on keydown and keyup.</p>
+            <div class="col-4">
+                Press any key. You will get the unicode value. <input type="text" id="input-field">
             </div>
 
         </div>
 
         <div class="row">
 
-            <div class="col-3">
-                <p>Mouse is at coordinates: <span></span>.</p>
+            <div class="col-4">
+                <p class="coordinates">coordinates: </p>
+                <div class="coordinates divcoordinates">  </div>
             </div>
 
-            <div class="col-3" onmousemove="myFunction(event)" onmouseout="clearCoor()">
-                <p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>
-                <p>When the mouse is moved over the div, the p element will display the horizontal and vertical coordinates of your mouse pointer, whose values are returned from the clientX and clientY properties on the 
-                MouseEvent object.</p>
-                <p id="demo"></p>
+            <div id="element-events" class="col-4">
+                <p>Try different methods</p>
+                <input type="text">
             </div>
 
-
-            <div class="col-3">
-                <p>Click this paragraph.</p>
-            </div>
-
-            <div class="col-3">
+            <div class="col-4">
                 <p id="hideShow">If you click on the "Hide" button, I will disappear.</p>
                 <button id="hide">Hide</button>
                 <button id="show">Show</button>
+            </div>
+
+        </div>
+
+        <div class="row">
+            
+            <div class="col-3">
+                <p class="changeStyle">Item 1</p>
+                <p class="changeStyle">Item 2</p>
+                <p class="changeStyle">Item 3</p>
+            </div>
+
+            <div class="col-3">
+
+            </div>
+
+            <div class="col-3">
+
+            </div>
+
+            <div class="col-3">
+
             </div>
 
         </div>
